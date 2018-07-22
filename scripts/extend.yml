@@ -1,0 +1,35 @@
+---
+- hosts: nfs
+  tasks:
+      - lvol:
+         vg: "/dev/vgcloud"
+         lv: "vishat123-lv1"
+         size: "2048"
+
+      - filesystem:
+         fstype: ext4
+         resizefs: yes
+         dev: "/dev/vgcloud/vishat123-lv1"
+
+      - file:
+         path: "/object/vishat123-lv1"
+         state: directory
+
+      - mount:
+         path: "/object/vishat123-lv1"
+         src: "/dev/vgcloud/vishat123-lv1"
+         fstype: ext4
+         state: mounted
+
+
+- hosts: vishat123
+  tasks:
+      - file:
+         path: "/media/vishat123"
+         state: directory
+
+      - mount:
+         path: "/media/vishat123"
+         src: "192.168.43.238:/object/vishat123-lv1"
+         fstype: nfs
+         state: mounted

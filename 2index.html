@@ -1,0 +1,368 @@
+<!DOCTYPE html >
+
+<head>
+ 
+ <title>Welcome to v5arcus</title>
+ 
+ <script src="javascript/jquery-1.9.1.js" ></script>
+ <script src="javascript/smoothscroll.js"></script>
+ <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+ <link rel="stylesheet" type="text/css" href="javascript/fancybox/jquery.fancybox.css"/>
+  <script src="javascript/fancybox/jquery.fancybox.js"></script>
+  
+  <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+ <link href='https://fonts.googleapis.com/css?family=IM+Fell+English:400,400italic' rel='stylesheet' type='text/css'>
+
+  
+ <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">	
+ <link rel="stylesheet" href="css/19July.css" />
+  
+  
+
+
+<script>
+$(document).ready(function()
+{  $("#alogindiv").hide();
+$("#signupdiv").hide(); 
+$("#ulogindiv").hide();  
+$(".fancybox").fancybox();
+ var scroll_start = 0;
+  var startchange = $(".maintext");
+  var offset = startchange.offset();
+
+  if (startchange.length) {
+    $(document).scroll(function() {
+      scroll_start = $(this).scrollTop();
+      if (scroll_start > offset.top) {
+        $("#top").css('background-color', '#68c3a3');
+      } else {
+        $('#top').css('background-color', 'transparent');
+      }
+    });
+  }
+  });
+
+function col()
+{
+var x=document.getElementById("topnav");
+x.style.color="#68c3a3";
+}
+function colback()
+{
+var x=document.getElementById("topnav");
+x.style.color="white";
+}
+
+function validation()
+{ var username=document.fillform.uname.value;
+  var ps=document.fillform.pwd.value;
+  
+    if(username=="root" && ps=="redhat")
+    { 
+      window.location="afterlogin.html";
+	   return false; 
+	}
+	else
+	{
+	  document.getElementById("err2").innerHTML="!";
+	}
+} 
+
+
+
+
+function validationreg(){
+var fname2=document.regform.fname.value;
+var lname2=document.regform.lname.value;
+var gender2=document.regform.gender.value;
+var date2=document.regform.date.value;
+var emailid2=document.regform.emailid.value;
+var password2=document.regform.password.value;
+var cpassword2=document.regform.cpassword.value;
+  
+    if(fname2=="")
+  { document.getElementById("err1").innerHTML="!";
+   var j=document.getElementById("fname1");
+   j.style.border="thin solid red";
+   return false;
+  }
+    if(lname2=="")
+  { document.getElementById("err2").innerHTML="!";
+  var j=document.getElementById("lname1");
+   j.style.border="thin solid red";
+    return false;
+  } 
+  if(gender2=="")
+  { document.getElementById("err3").innerHTML="!";
+  var j=document.getElementById("gender1");
+   j.style.border="thin solid red";
+    return false;
+  } 
+  if(date2=="")
+  { document.getElementById("err4").innerHTML="!";
+  var j=document.getElementById("date1");
+   j.style.border="thin solid red";
+    return false;
+  } 
+  if(emailid2=="")
+  { document.getElementById("err5").innerHTML="!";
+  var j=document.getElementById("emailid1");
+   j.style.border="thin solid red";
+    return false;
+  } 
+  if(password2=="")
+  { document.getElementById("err6").innerHTML="!";
+  var j=document.getElementById("password1");
+   j.style.border="thin solid red";
+    return false;
+  } 
+   if(cpassword2=="")
+  { document.getElementById("err7").innerHTML="!";
+  var j=document.getElementById("cpassword1");
+   j.style.border="thin solid red";
+    return false;
+  } 
+} 
+
+  
+</script>
+ 
+
+
+</head>
+
+<body>
+
+<img src="images/cover2.jpg" style="width:100%; height:100%; z-index: -100; position: fixed; ">
+<div id="mask" > </div>
+ <div id="top" class="row" >
+							
+							
+        <div style="width:20%;height:100%;padding-top:18px; float:left;  " class="col-md-3" > <a id="topnav" href="#" onMouseOver="col()" onMouseOut="colback()" >v5arcus</a> </div>
+						                     					   								           
+		 
+		  <!-- /.social-icons -->
+		 <div class="social-icons">
+        <ul style="display:inline">
+          <li style="display:inline"><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+          <li style="display:inline"><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+          <li style="display:inline"><a href="https://plus.google.com/collections/featured"><i class="fa fa-google-plus"></i></a></li>
+          <li style="display:inline"><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+          <li style="display:inline"><a href="https://www.pinterest.com/"><i class="fa fa-pinterest"></i></a></li>
+        </ul>
+      </div> <!-- /.social-icons -->
+ </div>
+ 
+ 
+ 
+ <!-- Register Login -->
+ <div class="maintext" >
+ 
+ <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+	<div id="paragr">Cloud is about how you do computing  <br /> Cloud is for everyone! </div>	
+	<br /><br /><br />
+	<div id="reglo">
+	               <div id="regbox" style="margin-left:3%;">
+				              <div id="innerreglo">
+	                             <a href="#signupdiv" class="fancybox" >User Login</a>	
+				             </div> 
+                  </div>
+				
+	                <div id="loginbox" style="margin-left:68%">
+					            <div id="innerreglo" >
+	 	                        <a href="#alogindiv" class="fancybox"  >Admin Login</a>	
+	               			</div>
+                   </div>
+	</div>
+
+				
+</div>			
+				
+				
+				
+				
+	 <!-- white portion-->
+			  <div  id="whitepor">
+		
+<!--1-->	  <div style="height:100%; width:32%; float:left;" >
+			  <div  id="whiteinner">
+			   <h3 style=" font-size: 35px;line-height: 28px; color:#0AC986; text-align:center;font-family: 'IM Fell English', serif;">Our Services</h3><br />
+			   <p style="  color:#0AC986; text-align:center;font-family: 'IM Fell English', serif;font-size:16px">We provide: <br />IAAS (Infrastructure As A Service)<br />CAAS (Container As A Service)<br />StAAS (Storage As A Service) <br /> -Block Storage <br /> -Object Storage</p>
+			  
+			  </div>
+			  </div>
+			  
+<!--2-->	<div  style="height:100%; width:33.3%; float:left;">
+			<div  id="whiteinner">
+			   <h3 style=" font-size: 30px;line-height: 28px; color:#0AC986; text-align:center;font-family: 'IM Fell English', serif;">Our Moto</h3>
+			   <p style="  color:#0AC986; text-align:center;font-family: 'IM Fell English', serif;font-size:16px">We cater to the client needs<br />Cloud is about how you do computing<br />Cloud is for everyone.<br />It's Democracy</p>
+			  
+    </div>
+			    </div>
+			  
+<!--3-->	<div  style="height:100%; width:32%;  float:left;" >
+			 <div  id="whiteinner">
+			   <h3 style=" font-size: 30px;line-height: 28px; color:#0AC986; text-align:center;font-family: 'IM Fell English', serif;">About Us</h3>
+			   <p style="  color:#0AC986; text-align:center;font-family: 'IM Fell English', serif; font-size:16px">We are established in the Pink City of Rajasthan, Jaipur<br /> We have been contributing to the cloud since last two months.<br />We have a very dynamic team with us to contribute to the cause and cater to the needs of our client<br /> </p>
+			  
+    </div>
+			  </div>
+			  
+			  </div>
+
+
+
+
+
+<!-- footer -->
+ <div class="copy-section">
+  <div class="container">
+   
+   <div class="footer-top">
+       <p>&copy; 2018 v5arcus. All rights reserved | Designed by Hrishika Pranjal</p>
+   </div>
+ </div>  
+
+<!-- footer ends -->
+
+
+			
+						  
+<!--   login form-->
+	                    
+
+<div id="alogindiv" style="height:400px; width:600px;  background-color:#0AC986 "> 
+<h1>ADMIN LOGIN</h1>
+<table>
+<tr>
+<td style=" width:1000px; height:300px; background-color:#0AC986"> 
+<div style="  margin-left:18% ">  
+<FORM name="fillform" style="background-color:#eee; width: 400px;height:250px;  padding: 40px 30px; " action="afterlogin.html" method="post">
+<TABLE BORDER="0" >
+  <TR>
+    <TD style="height:50px"><img src="images/User Male.png" style="height:15px; width:15px"/></TD>
+    <TD style="height:50px"><INPUT TYPE="TEXT" PLACEHOLDER="Username" NAME="uname" id="uname1" SIZE="35"  style="border: none;padding: 5px 7px 5px 15px;background:#fff;color:#666;border:2px solid #ddd;margin-left:5px;    border-radius: 4px; line-height:10px; ">
+          <label id="err1" style="color:#F00"></label>
+    </TD>
+  </TR>
+  <TR>
+    <TD style="height:50px"><img src="images/Password.png" style="height:15px; width:15px" /></TD>
+    <TD style="height:50px"><INPUT TYPE="PASSWORD" PLACEHOLDER="Password" NAME="pwd" id="pwd1"  SIZE="35" style="border: none;padding: 5px 7px 5px 15px;background:#fff;color: #666;border:2px solid #ddd; margin-left:5px;     border-radius: 4px; line-height:10px;">
+       <label id="err2" style="color:#FF0000"></label>
+    </TD>
+  </TR>
+</TABLE>
+
+<a class="link" href="#">Forgot password?</a><br /><br />
+     <button type="button" class="log-btn" onClick="validation()">Log in</button>
+</FORM> 
+</div>
+ </td>
+</tr>
+</table>
+</div>					
+
+	<!--   signup form-->
+	                    
+
+<div id="signupdiv" style="height:520px; width:600px;  background-color:#0AC986 "> 
+<h1>SIGN UP</h1>
+<table>
+<tr>
+<td style=" width:1000px; height:300px; background-color:#0AC986"> 
+<div style="  margin-left:18%;  ">  
+<FORM name="regform"  style="background-color:#eee; width: 400px;height:auto;  padding: 15px 30px;" action="after_register.php" method="post"  >
+<TABLE BORDER="0" >
+  <!--1 --><TR>
+   <TD style="height:50px"><img src="images/User Male.png" style="height:15px; width:15px"/></TD>
+    <TD style="height:50px"><INPUT TYPE="TEXT" PLACEHOLDER="First Name" NAME="f_name" id="fname1" SIZE="35"  style="border: none;padding: 5px 7px 5px 15px;background:#fff;color:#666;border:2px solid #ddd;    border-radius: 4px; line-height:10px; margin-left:10px">
+          <label id="err1" style="color:#F00"></label>
+    </TD>
+  </TR>
+ <!--1 --> <TR>
+    <TD style="height:50px"><img src="images/User Male.png" style="height:15px; width:15px"/></TD>
+    <TD style="height:50px"><INPUT TYPE="TEXT" PLACEHOLDER="Last Name" NAME="l_name" id="lname1" SIZE="35"  style="border: none;padding: 5px 7px 5px 15px;background:#fff;color:#666;border:2px solid #ddd;    border-radius: 4px;line-height:10px;margin-left:10px ">
+          <label id="err2" style="color:#F00"></label>
+    </TD>
+  </TR>
+  <!--1 --><TR>
+<TD style="height:50px"><img src="images/User Male.png" style="height:15px; width:15px"/></TD>
+<td> 
+<form>
+  <input type="radio" name="gender" value="male" style="margin-left:10px"> Male
+  <input type="radio" name="gender" value="female" style="margin-left:10px"> Female
+ </form> 
+  <label id="err3" style="color:#F00"></label>
+</TD>
+</TR>
+ <!--1 --> <TR>
+    <TD style="height:50px"><img src="images/User Male.png" style="height:15px; width:15px"/></TD>
+    <TD style="height:50px"><INPUT TYPE="DATE"  NAME="date" id="date1" SIZE="35"  style="border: none;padding: 5px 7px 5px 15px;background:#fff;color:#666;border:2px solid #ddd;    border-radius: 4px; line-height:10px; width:300px; margin-left:10px">
+          <label id="err4" style="color:#F00"></label>
+    </TD>
+  </TR>
+  <!--1 --> <TR>
+    <TD style="height:50px"><img src="images/User Male.png" style="height:15px; width:15px"/></TD>
+    <TD style="height:50px"><INPUT TYPE="Email"  NAME="emailid" PLACEHOLDER="Email Id" id="emailid1" SIZE="35"  style="border: none;padding: 5px 7px 5px 15px;background:#fff;color:#666;border:2px solid #ddd;    border-radius: 4px; line-height:10px; margin-left:10px">
+          <label id="err5" style="color:#F00"></label>
+    </TD>
+  </TR>
+  <!--1 --> <TR>
+    <TD style="height:50px"><img src="images/Password.png" style="height:15px; width:15px" /></TD>
+    <TD style="height:50px"><INPUT TYPE="PASSWORD" PLACEHOLDER="Password" NAME="password"id="password1"  SIZE="35" style="border: none;padding: 5px 7px 5px 15px;background:#fff;color: #666;border:2px solid #ddd;    border-radius: 4px; line-height:10px; margin-left:10px">
+       <label id="err6"style="color:#F00"></label>
+    </TD>
+  </TR>
+  <!--1 --> <TR>
+    <TD style="height:50px"><img src="images/Password.png" style="height:15px; width:15px" /></TD>
+    <TD style="height:50px"><INPUT TYPE="PASSWORD" PLACEHOLDER="Confirm Password" NAME="c_password"id="cpassword1"  SIZE="35" style="border: none;padding: 5px 7px 5px 15px;background:#fff;color: #666;border:2px solid #ddd;line-height:10px; margin-left:10px;    border-radius: 4px;">
+       <label id="err7"style="color:#F00"></label>
+    </TD>
+  </TR>
+  
+</TABLE>
+<br>
+     <input type="submit"  value="Register" class="log-btn" name="register_signup"  />
+     <a class="userlink" href="#ulogindiv"><b>Existing user? click here to login</a><br /><br />
+</FORM> 
+</div>
+ </td>
+</tr>
+</table>
+</div>	
+
+
+<div id="ulogindiv" style="height:400px; width:600px;  background-color:#0AC986 "> 
+<h1>USER LOGIN</h1>
+<table>
+<tr>
+<td style=" width:1000px; height:300px; background-color:#0AC986"> 
+<div style="  margin-left:18% ">  
+<FORM name="ufillform" style="background-color:#eee; width: 400px;height:250px;  padding: 40px 30px; " action="afterUserLogin.php" method="post">
+<TABLE BORDER="0" >
+  <TR>
+    <TD style="height:50px"><img src="images/User Male.png" style="height:15px; width:15px"/></TD>
+    <TD style="height:50px"><INPUT TYPE="TEXT" PLACEHOLDER="Username" NAME="uname" id="uname1" SIZE="35"  style="border: none;padding: 5px 7px 5px 15px;background:#fff;color:#666;border:2px solid #ddd;margin-left:5px;    border-radius: 4px; line-height:10px; ">
+          <label id="err3" style="color:#F00"></label>
+    </TD>
+  </TR>
+  <TR>
+    <TD style="height:50px"><img src="images/Password.png" style="height:15px; width:15px" /></TD>
+    <TD style="height:50px"><INPUT TYPE="PASSWORD" PLACEHOLDER="Password" NAME="pwd"id="pwd1"  SIZE="35" style="border: none;padding: 5px 7px 5px 15px;background:#fff;color: #666;border:2px solid #ddd; margin-left:5px;     border-radius: 4px; line-height:10px;">
+       <label id="err4"style="color:#F00"></label>
+    </TD>
+  </TR>
+</TABLE>
+
+<a class="link" href="#">Forgot password?</a><br /><br />
+     <button type="button" class="log-btn" onClick="after_login.php">Log in</button>
+</FORM> 
+</div>
+ </td>
+</tr>
+</table>
+</div>					
+
+</body>
+</html>

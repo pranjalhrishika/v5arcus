@@ -1,0 +1,144 @@
+<!DOCTYPE html >
+<head>
+
+<title>Welcome User</title>
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <link rel="stylesheet" href="css/19July.css" />
+ 
+<style>
+.dropbtn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+	
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+	width:10px;
+}
+
+.dropdown-content a {
+    color: #15abff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+	width:auto;
+}
+
+.dropdown-content a:hover {background-color: #15abff; color:#FFFFFF}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+   background-color:  #15abff;
+}
+
+.navbar-custom {
+    background-color: #1e90ff;
+    border-color: #15abff;
+}
+
+.navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+}
+.container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+	}
+
+
+	
+		
+nav .container-fluid .navbar-header {
+    padding: 0 26px;
+    border-bottom: 1px solid #b5b7b9;
+}
+
+.jumbotron{
+ padding:0;
+ 
+}
+</style>
+
+<script>
+ var btn = document.getElementById("Button"); btn.disabled = true;
+</script>
+</head>
+
+
+<body>
+
+ <nav class="navbar  navbar-custom navbar-fixed-top" role="navigation">
+   <div class="container-fluid" >
+   
+    <div style="width:100%; height:56px ; margin:0px; float:left;background-color:#1e90ff;" >
+	
+	   <div class="dropdown" style="padding:0">
+          <img src="images/logo.PNG" height="56" width="102" /> 
+       </div>
+	   
+       <div class="dropdown">
+          <button class="dropbtn" disabled><b>Our Services ></button> 
+       </div>
+	   
+	   <div class="dropdown">
+          <a href='scripts/caashome.py'><button class="dropbtn"><b>CaaS</button></a> 
+       </div>
+	   
+	   <div class="dropdown">
+          <a href='paas.html'><button class="dropbtn"><b>PaaS</button></a> 
+       </div>
+
+	   <div class="dropdown">
+          <a href='iaas.html'><button class="dropbtn"><b>IaaS</button></a> 
+       </div>
+	   
+	   <div class="dropdown">
+          <button class="dropbtn"><b>STaaS</button>
+          <div class="dropdown-content">
+          <a href="object-storage.html">Object Storage</a>
+	  <a href="block-storage.html">Block Storage</a>
+          </div>
+       </div>
+	   
+	 </div>
+   </div>	 
+ </nav>
+ 
+<div id="homepage" >
+    <div class="jumbotron"> 
+	<img src="images/cover2.jpg" height="665px" width="100%">
+ 	</div>
+	
+</div> 
+
+<!-- footer -->
+ <div class="copy-section">
+  <div class="container">
+   
+   <div class="footer-top">
+       <p>&copy; 2018 v5arcus. All rights reserved | Designed by Hrishika Pranjal</p>
+   </div>
+ </div>  
+
+<!-- footer ends -->
+</body>
+</html>

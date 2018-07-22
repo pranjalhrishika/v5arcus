@@ -1,0 +1,58 @@
+---
+- hosts: storageserver
+  tasks:
+
+        - package:
+                         name: "scsi-target-utils.x86_64"
+                         state: present
+
+        - file:
+                         state: directory
+                         path: "/gbs"
+
+        - fetch:
+                         src: "/etc/tgt/targets.conf"
+                         dest: "/gbs/"
+                         flat: yes
+
+        - lvol:
+                         vg: "vgcloud"
+                         lv: "harsh12"
+                         size: "512"
+                          
+- hosts: webserver
+  tasks:
+        - file:
+                         path: "/gbs/targets.conf"
+                         owner: "apache"
+
+        - blockinfile:
+                         path: "/gbs/targets.conf"
+                         block:  |
+                           <target harsh12>
+                               backing-store /dev/vgcloud/harsh12
+                           </target>
+
+- hosts: storageserver
+  tasks:
+        - copy:
+                         src: "/gbs/targets.conf"
+                         dest: "/etc/tgt/targets.conf"
+
+
+
+        - service:
+                         name: "tgtd"
+                         state: restarted
+
+- hosts: clientserver
+  tasks:
+        - open_iscsi:
+                         show_nodes: yes
+                         discover: yes
+                         portal: 192.168.43.238
+                         login: yes
+                         target: harsh12
+
+
+

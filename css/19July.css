@@ -1,0 +1,412 @@
+/* CSS Document */
+
+<style>
+.bg
+{ position: relative;
+background-repeat:no-repeat;
+-webkit-background-attachment: fixed;
+		padding: 0;
+		   background-attachment: fixed;
+
+}
+#mask
+{ background-color:#333333;
+width:100.5%;
+height:102%;
+opacity:0.7;
+position:absolute;
+margin-left:-10px;
+margin-top:-10px;
+}
+#mask_choose
+{ background-color:#333333;
+width:100.5%;
+height:auto;
+opacity:0.7;
+position:absolute;
+margin-left:-10px;
+margin-top:-10px;
+}
+body {
+  margin: 0;
+  background: #000; 
+}
+#searchbox
+{
+box-sizing: border-box;
+border: 2px solid white;
+border-radius: 4px;
+font-size: 13px;
+ height:40px; 
+width:450px;
+margin-left:230px;
+}
+#searchbox:hover
+{ border: thick solid #68c3a3;
+-webkit-transition: all 400ms;
+       -moz-transition: all 400ms;
+         -o-transition: all 400ms;
+            transition: all 400ms;    
+}
+
+#top
+{    z-index: 998;
+   height:13%;
+width:100.7%;
+position:fixed;
+margin-top:-10px; 
+margin-left:-10px;
+
+}
+
+
+#topnav
+{
+font-family: 'Satisfy', cursive;
+font-weight: 600;
+font-size: 40px;
+color:white;
+margin-left:30%;
+text-decoration:none;
+}
+
+ 
+#paragr
+{ height:auto; 
+width:auto; 
+text-align:center;
+ color:#FFFFFF;
+font-family: 'IM Fell English', serif;
+font-weight: 700;
+font-size: 45px;
+text-decoration:none;
+position:relative;
+display: block;
+margin-top:10px;
+}
+#paragr_topics
+{height:auto; 
+width:auto; 
+text-align:center;
+ color:#FFFFFF;
+font-family: 'IM Fell English', serif;
+font-weight: 700;
+font-size: 25px;
+text-decoration:none;
+position:relative;
+display: block;
+margin-top:10px;
+
+}
+#whitepor
+{ margin-top:290px;
+background-color:white;
+ width:100%;
+  height:400px;
+}
+#foot
+{
+width:100%;
+height:auto;
+background-color:#000000;
+}
+#reglo
+{
+	text-decoration:none;
+	color:#FFFFFF;
+	font-family: 'IM Fell English', serif;
+	font-weight: 700;
+	font-size: 20px;
+	position:absolute;
+	width:100%;
+	height:50px;
+	top: 120px;
+}
+
+#footinner
+{ height:inherit;
+width:33%;
+float:left;
+color:#999999;
+font-size:16px;
+padding-top:10px;
+text-align:center;
+}
+#whiteinner
+{margin:30px; 
+border: 1px solid #eee;
+ background-color:#FFFFFF;
+  height:80%;
+   width:80%;
+   font-family:'IM Fell English', serif;
+   padding:10px;
+}
+#whiteinner:hover
+{  
+   border:8px solid #68c3a3;
+    -webkit-transition: all 400ms;
+       -moz-transition: all 400ms;
+         -o-transition: all 400ms;
+            transition: all 400ms;    
+}
+h1 { padding-top:18px;
+  color: #eee;
+  text-align: center;
+  font-family: 'IM Fell English', serif;
+  font-size: 20px;
+  font-weight:bold;
+}
+.log-btn {
+  background: #0AC986;
+  dispaly: inline-block;
+  width: 100%;
+  font-size: 16px;
+  height: 30px;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+   border-radius: 4px;
+}
+.link {
+  text-decoration: none;
+  color: #C6C6C6;
+  float: right;
+  font-size: 14px;
+  margin-bottom: 15px;
+  font-family:'IM Fell English', serif;
+}
+.link:hover {
+  text-decoration: underline;
+  color: #8C918F;
+}
+
+.userlink {
+  text-decoration: none;
+  color: #0AC986;
+  float: right;
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-family:'IM Fell English', serif;
+}
+.userlink:hover {
+  text-decoration: underline;
+  color: #FF0000;
+}
+.section-title {
+    margin-bottom: 25px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 50px;
+    color: #68c3a3;
+    position: relative;
+	text-shadow:#999999;
+	padding-top:10px;
+	font-family: 'IM Fell English', serif;
+}
+
+
+.social-icons {
+   
+	width:auto;
+	margin-top:28px;
+	float:right;
+}
+.social-icons a i{
+    position: relative;
+    color: #fff;
+    font-size: 18px;
+    margin: 0 7px;
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+}
+
+.social-icons a i::before {
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons a i::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transition: all 300ms;
+       -moz-transition: all 300ms;
+         -o-transition: all 300ms;
+            transition: all 300ms;            
+}
+
+.social-icons a i:hover::after{
+    background: #68c3a3;
+    border: 1px solid transparent;
+    z-index: 0;
+}
+.maintext tr th:hover::after{
+    background: #68c3a3;
+    border: 1px solid transparent;
+    z-index: 0;
+}
+#regbox, #loginbox
+{
+height:80%;
+width:12.5%;
+ border: 3px solid #fff;
+    border-radius: 3px;
+text-align:center;
+font-family: 'IM Fell English', serif;
+font-weight: 700;
+font-size: 18px;
+color:#0AC986;
+text-decoration:none;
+float:left;
+ background-color:#0AC986;
+  position:relative;
+ }
+ #regbox_choose
+ {height:50px;
+width:300px;
+padding-left:10px;
+ border: 1px solid #fff;
+    border-radius: 3px;
+text-align:center;
+font-family: 'IM Fell English', serif;
+font-weight: 700;
+font-size: 20px;
+color:#0AC986;
+text-decoration:none;
+float:left;
+margin-left:70px;
+margin-bottom:20px;
+background-color:white;
+ }
+#loginbox a, #regbox a
+{ text-decoration:none;
+font-family: 'IM Fell English', serif;
+font-weight: 800;
+font-size: 25px;
+color:white;
+
+}
+ #regbox:hover,#loginbox:hover
+{  background: #68c3a3;
+    border: 3px solid thick;
+    z-index: 0;
+	-webkit-transition: all 300ms;
+       -moz-transition: all 300ms;
+}
+#innerreglo
+{
+   margin:2px
+}
+p
+{font-family: 'IM Fell English', serif;
+color:#1a1e23;
+padding:5px;
+}
+/* === FORM STYLE === */
+.form-control
+{
+ width:300px;
+    background-color: #f7f7f7;
+    border: 1px solid #e8e8e8;
+    border-radius: 3px;
+    box-shadow: 5px 5px 2px #888888;
+	line-height: 30px;
+	font-family: 'IM Fell English', serif;
+}
+	.form-control:focus {
+    border-color: #68c3a3;
+    box-shadow: none;
+	border-width:thick;
+}
+.contact-section strong {
+    display: block;
+	font-family: 'IM Fell English', serif;
+    
+}
+.contact-form strong {
+    margin-bottom: 40px;
+	font-family: 'IM Fell English', serif;
+	}
+.contact-section address,
+.contact-section .contact-number {
+    overflow: hidden;
+    line-height: 30px;
+    font-weight: 400;
+    margin-bottom: 45px;
+	z-index:50px;
+	font-family: 'IM Fell English', serif;
+	font-style:italic;
+}
+.form-group
+{margin-bottom:25px;
+font-family: 'IM Fell English', serif;
+}
+
+.form-control {
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	   -moz-transition: all 0.4s ease-in-out 0s;
+		-ms-transition: all 0.4s ease-in-out 0s;
+		 -o-transition: all 0.4s ease-in-out 0s;
+			transition: all 0.4s ease-in-out 0s;
+}
+
+.form-control,
+.form-control:hover,
+.form-control:focus,
+{
+	-webkit-box-shadow: none;
+			box-shadow: none;
+}
+.btn-primary{
+    background-color:#68c3a3;
+   }
+
+
+.btn{
+    border: thin solid white;
+       font-weight: 700;
+    text-transform: uppercase;
+    line-height: 20px;
+    padding: 9px 22px;
+	color:#FFFFFF;
+	font-family: 'IM Fell English', serif;
+	border-radius: 5px;
+	z-index:500px;
+	margin-left:-25%;
+}
+.btn:hover
+{ background: #68c3a3;
+    border: 1px solid transparent;
+    z-index: 0;
+}
+
+.copy-section {
+    padding: 2em 0;
+    background: #012231;
+    text-align: center;
+}
+.copy-section p {
+    font-size: 1.2em;
+    color: #fff;
+    font-weight: 400;
+	    line-height: 1.8em;
+}
+.copy-section a {
+    font-size: 1em;
+    color: #fff;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+</style>
